@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-final themeData=ThemeData(
-  textTheme:TextTheme(
-    bodySmall: TextStyle(
-      color: Colors.red,
-      fontSize: 11
-    )
+final customTheme=ThemeData(
+  inputDecorationTheme: InputDecorationTheme(
+    focusedBorder: OutlineInputBorder(borderRadius:BorderRadius.circular(20),borderSide: BorderSide(color: Colors.yellow)),
+    errorBorder:OutlineInputBorder(borderRadius:BorderRadius.circular(20),borderSide: BorderSide(color: Colors.red)),
+    enabledBorder:OutlineInputBorder(borderRadius:BorderRadius.circular(20),borderSide: BorderSide(color:Colors.green)),
+    focusedErrorBorder:OutlineInputBorder(borderRadius:BorderRadius.circular(20),borderSide: BorderSide(color:Colors.orange)),
+    disabledBorder: OutlineInputBorder(borderRadius:BorderRadius.circular(20),borderSide: BorderSide(color:Colors.grey)) 
   )
 
 );
