@@ -15,7 +15,9 @@ class _WeatherState extends State<Weather> {
     var url=Uri.https('www.googleapis.com','books/v1/volumes',{'q':'http'});
     var response=await http.get(url);
     print("response = ${convert.jsonDecode(response.body)}");
-    isLoading=false;
+     setState(() {
+          isLoading=false;
+        });
   }
   @override
   void initState(){
