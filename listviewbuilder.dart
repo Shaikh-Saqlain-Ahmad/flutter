@@ -24,10 +24,26 @@ class _SportsState extends State<Sports> {
       body: ListView.builder(
         itemCount: sportsList.length,
         itemBuilder: (context, index) {
+          String Trailing_text = '12/50';
           return ListTile(
-              leading: Icon(sportIcons[index]), title: Text(sportNames[index]));
+              leading: Icon(
+                sportIcons[index],
+                color: Colors.white,
+              ),
+              title: Text(
+                sportNames[index],
+                style: TextStyle(color: Colors.white),
+              ),
+              trailing: Container(
+                padding: EdgeInsets.all(12.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), color: Colors.red),
+                child: //child used because we are wrapping text in container
+                    Text(Trailing_text, style: TextStyle(color: Colors.white)),
+              ));
         },
       ),
+      backgroundColor: Colors.black,
     );
   }
 }
