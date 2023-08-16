@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'sports.dart';
 
 class Navbar extends StatefulWidget {
   const Navbar({super.key});
@@ -13,6 +14,12 @@ class _NavbarState extends State<Navbar> {
     setState(() {
       Selected_index = index;
     });
+    if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Sports()),
+      );
+    }
   }
 
   @override
@@ -35,7 +42,7 @@ class _NavbarState extends State<Navbar> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
-            label: 'Details',
+            label: 'Sports Details',
             backgroundColor: Colors.purple,
           ),
         ],
